@@ -22,8 +22,7 @@
 
 import gi.repository
 gi.require_version('Budgie', '1.0')
-gi.require_version('Wnck', '3.0')
-from gi.repository import Budgie, Gdk, Gio, GLib, GObject, Wnck, Gtk
+from gi.repository import Budgie, Gdk, Gio, GLib, GObject, Gtk
 
 class MyFancyApplet(GObject.GObject, Budgie.Plugin):
     """ This is simply an entry point into your Budgie Applet implementation.

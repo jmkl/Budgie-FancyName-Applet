@@ -5,6 +5,7 @@ project('budgie-fancyname-applet',
 
 i18n = import('i18n')
 python = import('python3')
+gnome = import('gnome')
 
 message('Looking for dependencies')
 python_bin = python.find_python()
@@ -31,14 +32,10 @@ conf.set('PROJECT_NAME', meson.project_name())
 
 message('Installing applet...')
 
-gnome = import('gnome')
-
 install_data(
     'MyFancyApplet.plugin',
     install_dir: APPLET_INSTALL_DIR
 )
-
-
 install_data(
     'com.solus.budgie-fancyname.gschema.xml',
     install_dir: join_paths(datadir, 'glib-2.0', 'schemas'),
